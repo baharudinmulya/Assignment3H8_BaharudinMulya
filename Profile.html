@@ -63,7 +63,7 @@
     
     <form target="frame" autocomplete="off">
         <div class="form-group"  style="padding:15px;">
-            <label for=""><strong>Nama </label><br><input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" class="form-control" onkeyup="tampil(this)">
+            <label for=""><strong>Nama </label><br><input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" class="form-control" onkeyup="tampil(this);kosong()">
         </div>
 
         <div id="saran">
@@ -197,6 +197,18 @@
 
         if(val.toLowerCase().match(perbandingan.toLowerCase())){
             document.getElementById("saran").innerHTML += "<br>"+ val + " ";
+        }
+
+    }
+
+    //function buat liat input nama telah kosong
+    function kosong(){
+        var a=document.getElementById("nama").value;
+        if(a==""){
+            document.getElementById("saran").style.display="none";
+        }
+        else{
+            document.getElementById("saran").style.display="block";
         }
     }
 
