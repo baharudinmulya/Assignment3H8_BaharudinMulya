@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 1</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color:#f6f7fc; color:black;">
+
+    
+<div class="navbar">
+
+<ul class="nav ml-auto" style="padding-right:5%; color:black;">
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:black;">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:black;">PRODUCT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:black;">GALLERY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:black;">BLOG</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">INVENTORY</a>
+          </li>
+</ul>
+</div>
+
+<div class="article clearfix">
+    <div class="gambar">
+        <img class="img-circle" src="images/Capture.JPG" width="180px;" height="180px;"alt="">
+    </div>
+        <div class="left-article">
+            <h2 id="namanya">Baharudin Mulya</h2>
+            <p id="rolenya">Front End Designer</p>
+            <p><button class="kontak" onclick="editdiklik()">Edit</button><button class="resume" style="margin-left:10px;">Resume</button></p>
+    
+        </div>   
+
+        <div class="right-article">
+            <p>Availability</p>
+            <p>Usia</p>
+            <p>Lokasi</p>
+            <p>Pengalaman</p>
+            <p>Email</p>
+        </div>
+
+        <div class="right-article2">
+            <p id="avail1">Full Time</p>
+            <p id="umur">19</p>
+            <p id="kota">Jakarta</p>
+            <p id="pengalaman">2</p>
+            <p id="email1">email@gmail.com</p>
+        </div>
+    </div>
+
+<iframe name="frame"></iframe>
+
+<div class="article2" id="sectionprofile">
+    
+    <form target="frame" autocomplete="off">
+        <div class="form-group"  style="padding:15px;">
+            <label for=""><strong>Nama </label><br><input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" class="form-control" onkeyup="tampil(this)">
+        </div>
+
+        <div id="saran">
+
+        </div>
+        <div class="form-group"  style="padding:15px;">
+            <label for="">Role </label><select name="" id="role" class="custom-select">
+            <option value="Front End Designer">Front End Designer</option>
+            <option value="Backend">Back End</option>
+            </select>
+        </div>
+
+        <div class="form-group"  style="padding:15px;">
+            <label for="">Availability </label><input type="text" id="Availability" class="form-control">
+        </div>
+
+        <div class="form-group"  style="padding:15px;">
+            <label for="">Usia </label><input type="number" id="Usia" class="form-control">
+        </div>
+        <div class="form-group"  style="padding:15px;">
+            <label for="">Lokasi </label><input type="text" id="Lokasi" class="form-control">
+        </div>
+        <div class="form-group"  style="padding:15px;">
+            <label for="">Years Experience </label><input type="number" id="Years" class="form-control">
+        </div>
+        <div class="form-group"  style="padding:15px;">
+            <label for="">Email </label><input type="email" id="email" class="form-control">
+        </div>
+        </strong>
+
+        <div class="col text-center">
+            <input type="submit" class="btn btn-success" onclick="udahdisubmitnih()">
+        </div>
+    </form>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script> -->
+<script>
+
+    //Function awal ketika halaman diload
+    function telahdiload(){
+       var a=document.getElementById("avail1").innerHTML;
+       var b=document.getElementById("umur").innerHTML;
+       var c=document.getElementById("kota").innerHTML;
+        var d=document.getElementById("pengalaman").innerHTML;
+        var e=document.getElementById("email1").innerHTML;
+        var f=document.getElementById("namanya").innerHTML;
+        var g=document.getElementById("rolenya").innerHTML;
+        document.getElementById("Availability").value = a;
+        document.getElementById("Usia").value = b;
+        document.getElementById("Lokasi").value = c;
+        document.getElementById("Years").value = d;
+        document.getElementById("email").value = e;
+        document.getElementById("nama").value = f;
+        document.getElementById("role").value = g;
+        console.log( document.getElementById("email1").innerHTML);
+    }
+
+    //function untuk menyembunyikan section profile
+    function sembunyisectionprofile(){
+        document.getElementById("sectionprofile").style.display = "none";
+    }
+    telahdiload();
+    sembunyisectionprofile();
+
+    //function untuk menampilkan section profile ketika button edit diklik
+    function editdiklik(){
+        var x = document.getElementById("sectionprofile");
+        if(x.style.display === "none"){
+            x.style.display = "block";
+        }
+        else if(x.style.display === "block"){
+            sembunyisectionprofile();
+        }
+    }
+
+    //function ketika sudah disubmit
+    function udahdisubmitnih(){
+// e.preventDefault();
+        var a=document.getElementById("Availability").value;
+        var b=document.getElementById("Usia").value;
+        var c=document.getElementById("Lokasi").value;
+        var d=document.getElementById("Years").value;
+        var e=document.getElementById("email").value;
+        var f=document.getElementById("nama").value;
+        var g=document.getElementById("role").value;
+        document.getElementById("avail1").innerHTML = a;
+        document.getElementById("umur").innerHTML = b;
+        document.getElementById("kota").innerHTML = c;
+        document.getElementById("pengalaman").innerHTML = d;
+        document.getElementById("email1").innerHTML = e;
+        document.getElementById("namanya").innerHTML = f;
+        document.getElementById("rolenya").innerHTML = g;
+        
+    }
+
+
+    //Function saran
+    function tampil(text){
+        
+    //Daftar saran
+    var names= [
+        "Achmad Dinofaldi",
+        "Adzim Zul Fahmi",
+        "Baharudin Multazam",  
+        "Zaldan Zulhakim",
+        "Ridzky Oktaviari",
+        "Neldy Wijaya",
+        "Feri Afrianto",
+        "Tommy Ghozali",
+        "Farhan Altariq",
+        "Bentar Raharja",
+        "Maulana Risqi"
+    ];
+        document.getElementById("saran").innerHTML = "";
+        names.forEach(test);
+    }
+
+    //Function untuk menampilkan saran
+    function test(val){
+        var perbandingan = document.getElementById("nama").value;
+
+        if(val.toLowerCase().match(perbandingan.toLowerCase())){
+            document.getElementById("saran").innerHTML += "<br>"+ val + " ";
+        }
+    }
+
+    // console.log(document.getElementById("saran").value);
+</script> 
+
+
+</html>
